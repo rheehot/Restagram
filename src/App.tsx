@@ -1,12 +1,22 @@
 import React from 'react';
-import { Login } from '@pages/index';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Login, SignUp } from '@pages/index';
 import GlobalStyle from 'styles/global';
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
-      <Login />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Login />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+        </Switch>
+      </Router>
     </>
   );
 };
