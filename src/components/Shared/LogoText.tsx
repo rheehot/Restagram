@@ -8,7 +8,7 @@ const StyledLogoText = styled.p`
 `;
 
 const LogoText = ({ size }: { size?: string }) => (
-  <StyledLogoText size={size}>Instagram</StyledLogoText>
+  <StyledLogoText size={size}>Restagram</StyledLogoText>
 );
 
 export default LogoText;
