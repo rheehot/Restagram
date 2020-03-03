@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import LayoutWrapper from '@styles/layout';
+import AuthFacebook from '@components/Shared/AuthFacebook';
 import * as S from './LoginOther.style';
 
 const LoginOther = () => {
@@ -8,13 +10,12 @@ const LoginOther = () => {
       <LayoutWrapper>
         <div>
           <S.NoAccount>
-            계정이 없으신가요? <S.SignUpSpan>회원가입</S.SignUpSpan>
+            계정이 없으신가요?
+            <Link to="/signup">
+              <S.SignUpSpan>회원가입</S.SignUpSpan>
+            </Link>
           </S.NoAccount>
-          <S.Divider />
-          <S.FacebookButton>
-            <S.FacebookIcon />
-            페이스북으로 로그인
-          </S.FacebookButton>
+          <AuthFacebook />
         </div>
       </LayoutWrapper>
     </section>
