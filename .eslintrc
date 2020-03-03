@@ -13,6 +13,16 @@
   "ignorePatterns": ["node_modules/"],
   "settings": {
     "import/resolver": {
+      "alias": {
+        "map": [
+          ["@components", "./src/components"],
+          ["@pages", "./src/pages"],
+          ["@hooks", "./src/hooks"],
+          ["@styles", "./src/styles"],
+          ["@utils", "./src/utils"]
+        ],
+        "extensions": [".ts", ".tsx", ".js", ".jsx"]
+      },
       "node": {
         "paths": ["src"],
         "extensions": [".ts", ".tsx"]
@@ -34,6 +44,7 @@
       "ignorePackages",
       {
         "ts": "never",
+        "js": "never",
         "tsx": "never"
       }
     ]
