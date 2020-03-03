@@ -5,7 +5,7 @@
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/eslint-recommended"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "@typescript-eslint"],
   "env": {
     "browser": true,
     "jest": true
@@ -35,9 +35,10 @@
     "react/jsx-props-no-spreading": "off",
     "no-plusplus": "off",
     "no-param-reassign": "off",
-    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-unused-vars": "off",
     "no-restricted-syntax": "off",
     "no-continue": "off",
+    "@typescript-eslint/no-unused-vars": "error",
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "import/extensions": [
       "error",
