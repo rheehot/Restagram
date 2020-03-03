@@ -7,9 +7,9 @@ const LoginForm = () => {
   return (
     <section>
       <LayoutWrapper>
-        <S.Form method="POST">
-          <AuthInput placeholder="아이디" />
-          <AuthInput placeholder="비밀번호" />
+        <S.Form>
+          <AuthInput type="text" placeholder="아이디" />
+          <AuthInput type="password" placeholder="비밀번호" />
           <S.LoginButton type="submit">로그인</S.LoginButton>
         </S.Form>
       </LayoutWrapper>

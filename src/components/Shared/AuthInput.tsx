@@ -8,8 +8,13 @@ const StyledAuthInput = styled.input`
   margin-bottom: 0.7rem;
 `;
 
-const AuthInput = ({ placeholder }: { placeholder: string }) => (
-  <StyledAuthInput placeholder={placeholder} />
+interface IAuthInputProps {
+  placeholder: string;
+  type: string;
+}
+
+const AuthInput = ({ placeholder, type }: IAuthInputProps) => (
+  <StyledAuthInput type={type} placeholder={placeholder} />
 );
 
 export default AuthInput;
