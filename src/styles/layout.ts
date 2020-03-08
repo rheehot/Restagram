@@ -5,7 +5,7 @@ const LayoutWrapper = styled.div`
   margin: 0 auto;
   width: 90vw;
 
-  @media ${device.TabletPortrait} {
+  @media ${device.Laptops} {
     width: 1200px;
   }
 `;
