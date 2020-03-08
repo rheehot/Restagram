@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 // Color
 
@@ -7,7 +7,7 @@ export const mainGrey = '#EFEFEF';
 
 // z-index
 
-export const navZindex = 9999;
+export const mobileFixedZindex = 100;
 
 // Media query breakpoints
 
@@ -47,4 +47,14 @@ export const centerStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const mobileHeaderHeight = '64px';
+export const mobileNavHeight = '52px';
+
+export const CircleImage = styled.img`
+  width: ${({ profileSize = '36px' }: { profileSize?: string }) => profileSize};
+  height: ${({ profileSize = '36px' }: { profileSize?: string }) =>
+    profileSize};
+  border-radius: 50%;
 `;
