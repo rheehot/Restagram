@@ -19,7 +19,8 @@
           ["@pages", "./src/pages"],
           ["@hooks", "./src/hooks"],
           ["@styles", "./src/styles"],
-          ["@utils", "./src/utils"]
+          ["@utils", "./src/utils"],
+          ["@images", "./src/images"],
         ],
         "extensions": [".ts", ".tsx", ".js", ".jsx"]
       },
