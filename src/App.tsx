@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Login, SignUp } from '@pages/index';
+import { Login, SignUp, Home } from '@pages/index';
 import GlobalStyle from 'styles/global';
 
 const App = () => {
@@ -9,12 +9,9 @@ const App = () => {
       <GlobalStyle />
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Login />
-          </Route>
-          <Route path="/signup">
-            <SignUp />
-          </Route>
+          <Route exact path="/" component={Login} />
+          <Route path="/signup" component={SignUp} />
+          <Route path="/home" component={Home} />
         </Switch>
       </Router>
     </>
