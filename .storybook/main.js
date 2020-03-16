@@ -20,6 +20,7 @@ module.exports = {
       '@hooks': 'hooks',
       '@styles': 'styles',
       '@utils': 'utils',
+      '@images': 'images',
     };
     return config;
   }
