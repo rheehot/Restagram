@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaFacebookSquare } from 'react-icons/fa';
-import { authFormStyle, authFormWidth, device } from '@styles/variables';
+import oc from 'open-color';
+import variables from '@styles/variables';
+import shared from '@styles/shared';
+import device from '@styles/device';
+import palette from '@styles/palette';
 
 const Divider = styled.hr`
   position: relative;
@@ -15,35 +19,35 @@ const Divider = styled.hr`
     width: 100%;
     left: 0;
     top: 50%;
-    border-top: 1px solid #bbb;
+    border-top: 1px solid ${oc.gray[4]};
   }
 
   &::after {
     content: '또는';
     padding: 0 1rem;
     position: relative;
-    color: #bbb;
-    background-color: #fff;
+    color: ${oc.gray[4]};
+    background-color: white;
   }
 
   @media ${device.TabletPortrait} {
-    width: ${authFormWidth};
+    width: ${variables.auth.formWidth};
   }
 `;
 
 const FacebookButton = styled.button`
-  ${authFormStyle};
+  ${shared.authFormStyle};
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #11589a;
+  background-color: ${palette.facebookBlue};
   font-size: 1.3rem;
-  color: #fff;
+  color: white;
   margin: 0 auto;
 `;
 
 const FacebookIcon = styled(FaFacebookSquare)`
-  color: #fff;
+  color: white;
   margin-right: 1rem;
   font-size: 1.5rem;
 `;

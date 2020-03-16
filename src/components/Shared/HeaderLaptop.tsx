@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { IoMdHeartEmpty, IoIosSearch } from 'react-icons/io';
 import { FaRegCompass } from 'react-icons/fa';
+import oc from 'open-color';
 import profile from '@images/profile.jpg';
-import { CircleImage, mainGrey } from '@styles/variables';
+import shared from '@styles/shared';
 import LayoutWrapper from '@styles/layout';
 import LogoIcon from './LogoIcon';
 import LogoText from './LogoText';
@@ -14,7 +15,7 @@ const Header = styled.header`
   top: 0;
   width: 100%;
   background-color: white;
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid ${oc.gray[4]};
   padding: 0 1rem;
 `;
 
@@ -43,10 +44,10 @@ const UL = styled.ul`
 
 const Search = styled.div`
   display: flex;
-  border: 1px solid #bbbbbb;
+  border: 1px solid ${oc.gray[4]};
   border-radius: 3px;
   padding: 0.5rem 0.7rem;
-  background-color: #fafafa;
+  background-color: ${oc.white[4]};
   width: 300px;
 `;
 
@@ -82,7 +83,7 @@ const HeaderLaptop = () => {
                 <FaRegCompass />
               </li>
               <li>
-                <CircleImage
+                <shared.CircleImage
                   profileSize="2rem"
                   src={profile}
                   alt="프로필 사진"

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { authFormStyle, centerStyle } from '@styles/variables';
+import shared from '@styles/shared';
 
 const Form = styled.form`
-  ${centerStyle};
+  ${shared.centerStyle};
   flex-direction: column;
 `;
 
 const SignUpButton = styled.button`
-  ${authFormStyle};
+  ${shared.authFormStyle};
   background-color: black;
   color: white;
   font-size: 1.3rem;

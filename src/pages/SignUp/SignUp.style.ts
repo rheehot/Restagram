@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { centerStyle } from '@styles/variables';
+import shared from '@styles/shared';
 
 const Container = styled.main`
-  ${centerStyle};
+  ${shared.centerStyle};
   height: 100vh;
   flex-direction: column;
 `;

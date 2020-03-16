@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { device } from 'styles/variables';
+import device from '@styles/device';
 
 const LayoutWrapper = styled.div`
   margin: 0 auto;

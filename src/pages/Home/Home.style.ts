@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { mobileHeaderHeight, mobileNavHeight } from '@styles/variables';
+import variables from '@styles/variables';
 
 const Main = styled.main`
-  padding-top: calc(${mobileHeaderHeight} + 1rem);
-  padding-bottom: calc(${mobileNavHeight} + 1rem);
+  padding-top: calc(${variables.mobile.headerHeight} + 1rem);
+  padding-bottom: calc(${variables.mobile.navHeight} + 1rem);
 `;
 
 export default Main;

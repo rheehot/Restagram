@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { authFormStyle } from '@styles/variables';
+import oc from 'open-color';
+import shared from '@styles/shared';
 
 const StyledAuthInput = styled.input`
-  ${authFormStyle};
-  border: 1px solid #bbb;
+  ${shared.authFormStyle};
+  border: 1px solid ${oc.gray[4]};
   margin-bottom: 0.7rem;
 `;
 

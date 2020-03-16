@@ -6,24 +6,22 @@ import {
   IoIosAddCircleOutline,
   IoIosHeartEmpty,
 } from 'react-icons/io';
-import {
-  CircleImage,
-  mobileNavHeight,
-  mobileFixedZindex,
-} from '@styles/variables';
+import shared from '@styles/shared';
+import zIndexes from '@styles/zIndexes';
+import variables from '@styles/variables';
 
 const Nav = styled.nav`
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  z-index: ${mobileFixedZindex};
+  z-index: ${zIndexes.mobileFixed};
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #ffffff;
   font-size: 2rem;
-  height: ${mobileNavHeight};
+  height: ${variables.mobile.navHeight};
   border-top: 1px solid #bbbbbb;
 `;
 
@@ -34,7 +32,7 @@ const NavMobile = ({ path }: { path: string }) => {
       <IoIosSearch />
       <IoIosAddCircleOutline />
       <IoIosHeartEmpty />
-      <CircleImage src={path} alt="프로필 사진" />
+      <shared.CircleImage src={path} alt="프로필 사진" />
     </Nav>
   );
 };

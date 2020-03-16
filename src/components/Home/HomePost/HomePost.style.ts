@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { mainGrey, device } from '@styles/variables';
+import palette from '@styles/palette';
+import device from '@styles/device';
 
 const Post = styled.div`
-  border: 1px solid ${mainGrey};
+  border: 1px solid ${palette.mainGrey};
   margin: 0 auto;
 
   @media ${device.TabletPortrait} {

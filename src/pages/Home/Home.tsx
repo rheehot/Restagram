@@ -5,7 +5,7 @@ import HeaderLaptop from '@components/Shared/HeaderLaptop';
 import { HomePost } from '@components/Home/index';
 import NavMobile from '@components/Shared/NavMobile';
 import profile from '@images/profile.jpg';
-import { device } from '@styles/variables';
+import device from '@styles/device';
 import Main from './Home.style';
 
 const Home = () => {

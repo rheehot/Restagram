@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import { mainGrey, mainBlue, CircleImage } from '@styles/variables';
+import shared from '@styles/shared';
+import palette from '@styles/palette';
 
 const PostHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: ${mainGrey};
+  background-color: ${palette.mainGrey};
   padding: 0.7rem 1rem;
 `;
 
@@ -14,7 +15,7 @@ const PostHeaderMain = styled.div`
   align-items: center;
 `;
 
-const PostProfile = styled(CircleImage)`
+const PostProfile = styled(shared.CircleImage)`
   margin-right: 1rem;
 `;
 
@@ -23,7 +24,7 @@ const PostName = styled.h2`
 `;
 
 const PostFollow = styled.span`
-  color: ${mainBlue};
+  color: ${palette.mainBlue};
   margin-right: 1rem;
 `;
 
