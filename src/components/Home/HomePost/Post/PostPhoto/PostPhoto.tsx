@@ -1,25 +1,21 @@
 import React from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import post from '@images/post.jpg';
+import { IPostState } from '@components/Home/types';
 import * as S from './PostPhoto.style';
 
-const PostPhoto = () => {
+const PostPhoto = ({ post }: { post: IPostState }) => {
   const settings = {
     dots: true,
   };
 
   return (
     <S.PostSlider {...settings}>
-      <div>
-        <S.PostImg src={post} alt="포스팅사진" />
-      </div>
-      <div>
-        <S.PostImg src={post} alt="포스팅사진" />
-      </div>
-      <div>
-        <S.PostImg src={post} alt="포스팅사진" />
-      </div>
+      {post.images.map(image => (
+        <div key={image}>
+          <S.PostImg src={image} alt="포스팅 사진" />
+        </div>
+      ))}
     </S.PostSlider>
   );
 };

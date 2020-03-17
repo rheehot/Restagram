@@ -1,27 +1,32 @@
 import React from 'react';
+import { IPostState, IShortComment } from '@components/Home/types';
 import * as S from './PostFooter.style';
 
-const PostFooter = () => {
+const PostFooter = ({ post }: { post: IPostState }) => {
   return (
     <S.PostFooter>
       <S.PostInteraction>
         <S.PostInteractionMain>
-          <S.PostHeartIcon />
+          {post.isILike && <S.PostHeartIcon />}
           <S.PostCommentIcon />
         </S.PostInteractionMain>
         <S.PostBookmarkIcon />
       </S.PostInteraction>
-      <S.PostLikeMessage>배하람님 외 19억명이 좋아합니다.</S.PostLikeMessage>
+      <S.PostLikeMessage>{post.numOfLikes}명이 좋아합니다.</S.PostLikeMessage>
       <S.PostIntroMessage>
-        <span>renabaebae</span>
-        내가 바로 세젤예
+        <span>{post.authorId}</span>
+        {post.content}
       </S.PostIntroMessage>
-      <S.PostMoreCommentMessage>댓글 5개 모두 보기</S.PostMoreCommentMessage>
-      <S.PostCommentMessage>
-        <span>baeharam</span>
-        너무 예뻐용
-      </S.PostCommentMessage>
-      <S.PostTime>3일전</S.PostTime>
+      <S.PostMoreCommentMessage>
+        댓글 {post.numOfComments}개 모두 보기
+      </S.PostMoreCommentMessage>
+      {post.recentComments.map((recentComment: IShortComment) => (
+        <S.PostCommentMessage key={recentComment.id}>
+          <span>{recentComment.author}</span>
+          {recentComment.content}
+        </S.PostCommentMessage>
+      ))}
+      <S.PostTime>{post.time}일전</S.PostTime>
     </S.PostFooter>
   );
 };
