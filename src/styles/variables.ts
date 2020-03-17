@@ -10,7 +10,14 @@ const mobile = {
   navHeight: '52px',
 };
 
+// Comments
+const comments = {
+  headerHeight: '48px',
+  formHeight: '64px',
+};
+
 export default {
   auth,
   mobile,
+  comments,
 };

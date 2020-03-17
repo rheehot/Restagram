@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import palette from '@styles/palette';
 import device from '@styles/device';
 
-const Post = styled.div`
+const Container = styled.div`
   border: 1px solid ${palette.mainGrey};
   margin: 0 auto;
 
@@ -11,4 +11,4 @@ const Post = styled.div`
   }
 `;
 
-export default Post;
+export default Container;

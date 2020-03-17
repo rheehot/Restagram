@@ -18,6 +18,11 @@ const GlobalStyle = createGlobalStyle`
     font-family: inherit;
     border: none;
   }
+  input {
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+  }
 `;
 
 export default GlobalStyle;
