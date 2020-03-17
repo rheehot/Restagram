@@ -25,3 +25,5 @@ yarn-error.log*
 # temporary images
 src/images/post.jpg
 src/images/profile.jpg
+
+state
