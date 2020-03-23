@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import oc from 'open-color';
 import { IoMdHeartEmpty } from 'react-icons/io';
-import shared from '@styles/shared';
-import { ICommentState } from '@components/CommentsMobile/types';
+import shared from '@/styles/shared';
+import { ICommentState } from '@/components/CommentsMobile/types';
 
 const Container = styled.div`
   display: flex;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { SignUpIntro, SignUpForm, SignUpOther } from '@components/SignUp/index';
+import { SignUpIntro, SignUpForm, SignUpOther } from '@/components/SignUp/index';
 import Container from './SignUp.style';
 
 const SignUp = () => {

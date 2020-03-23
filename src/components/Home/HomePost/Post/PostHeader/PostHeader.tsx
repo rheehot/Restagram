@@ -1,6 +1,6 @@
 import React from 'react';
-import { IPostState } from '@components/Home/types';
-import dots from '@images/dots.png';
+import { IPostState } from '@/components/Home/types';
+import dots from '@/images/dots.png';
 import * as S from './PostHeader.style';
 
 const PostHeader = ({ post }: { post: IPostState }) => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import AuthInput from '@components/Shared/AuthInput';
-import LayoutWrapper from 'styles/layout';
+import AuthInput from '@/components/Shared/AuthInput';
+import LayoutWrapper from '@/styles/layout';
 import * as S from './LoginForm.style';
 
 const LoginForm = () => {

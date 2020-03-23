@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import palette from '@styles/palette';
-import device from '@styles/device';
+import palette from '@/styles/palette';
+import device from '@/styles/device';
 
 const Container = styled.div`
   border: 1px solid ${palette.mainGrey};

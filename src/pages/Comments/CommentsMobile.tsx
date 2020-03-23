@@ -3,8 +3,8 @@ import {
   CommentsMobileTop,
   CommentsMobileAuthor,
   CommentsMobileContent,
-} from '@components/CommentsMobile/index';
-import { ICommentsState } from '@components/CommentsMobile/types';
+} from '@/components/CommentsMobile/index';
+import { ICommentsState } from '@/components/CommentsMobile/types';
 
 const CommentsMobile = () => {
   const commentState: ICommentsState = {

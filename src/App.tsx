@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Login, SignUp, Home, Comments } from '@pages/index';
-import GlobalStyle from 'styles/global';
+import { Login, SignUp, Home, Comments } from '@/pages/index';
+import GlobalStyle from '@/styles/global';
 
 const App = () => {
   return (

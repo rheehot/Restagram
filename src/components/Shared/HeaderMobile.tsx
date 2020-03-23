@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import LayoutWrapper from '@styles/layout';
-import variables from '@styles/variables';
-import zIndexes from '@styles/zIndexes';
+import LayoutWrapper from '@/styles/layout';
+import variables from '@/styles/variables';
+import zIndexes from '@/styles/zIndexes';
 import LogoText from './LogoText';
 
 const Header = styled.header`

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import oc from 'open-color';
-import shared from '@styles/shared';
+import shared from '@/styles/shared';
 
 const StyledAuthInput = styled.input`
   ${shared.authFormStyle};

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LayoutWrapper from '@styles/layout';
-import AuthFacebook from '@components/Shared/AuthFacebook';
-import LocationDisplay from '@utils/LocationDisplay';
+import LayoutWrapper from '@/styles/layout';
+import AuthFacebook from '@/components/Shared/AuthFacebook';
+import LocationDisplay from '@/utils/LocationDisplay';
 import * as S from './LoginOther.style';
 
 const LoginOther = () => {

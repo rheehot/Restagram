@@ -1,5 +1,5 @@
 import React from 'react';
-import NavTemplate from '@components/Shared/NavTemplate';
+import NavTemplate from '@/components/Shared/NavTemplate';
 import CommentsMobile from './CommentsMobile';
 import Main from './Comments.style';
 

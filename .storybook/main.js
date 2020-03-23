@@ -15,12 +15,7 @@ module.exports = {
   
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
-      '@components': 'components',
-      '@pages': 'pages',
-      '@hooks': 'hooks',
-      '@styles': 'styles',
-      '@utils': 'utils',
-      '@images': 'images',
+      '@': 'src'
     };
     return config;
   }

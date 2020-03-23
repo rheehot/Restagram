@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import oc from 'open-color';
-import shared from '@styles/shared';
+import shared from '@/styles/shared';
 
 const Wrapper = styled.div`
   padding: 1.7rem 0;

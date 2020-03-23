@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useMediaQuery } from 'react-responsive';
-import device from '@styles/device';
-import variables from '@styles/variables';
-import HeaderMobile from '@components/Shared/HeaderMobile';
-import HeaderLaptop from '@components/Shared/HeaderLaptop';
-import NavMobile from '@components/Shared/NavMobile';
-import profile from '@images/profile.jpg';
+import device from '@/styles/device';
+import variables from '@/styles/variables';
+import HeaderMobile from '@/components/Shared/HeaderMobile';
+import HeaderLaptop from '@/components/Shared/HeaderLaptop';
+import NavMobile from '@/components/Shared/NavMobile';
+
+const profile = 'https://bit.ly/39WMuWx';
 
 const Main = styled.main`
   padding-top: calc(${variables.mobile.headerHeight} + 1rem);

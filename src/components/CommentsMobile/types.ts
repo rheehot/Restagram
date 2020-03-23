@@ -1,4 +1,4 @@
-interface ICommentState {
+export interface ICommentState {
   id: number;
   authorId: string;
   authorProfile: string;
