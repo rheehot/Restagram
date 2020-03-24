@@ -1,7 +1,7 @@
 import React from 'react';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { ICommentsState } from '@components/CommentsMobile/types';
+import { ICommentsState } from '@/components/CommentsMobile/types';
 import * as S from './CommentsLaptopPhoto.style';
 
 const CommentsLaptopPhoto = ({

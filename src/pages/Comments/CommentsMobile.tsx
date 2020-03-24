@@ -5,8 +5,8 @@ import {
   CommentsMobileContent,
 } from '@/components/CommentsMobile/index';
 import { ICommentsState } from '@/components/CommentsMobile/types';
-import NavMobile from '@/components/Shared/NavMobile';
-import Main from './CommentsMobile.style';
+import PageTemplateMobile from '@/components/Shared/PageTemplateMobile';
+import Section from './CommentsMobile.style';
 
 const CommentsMobile = () => {
   const commentState: ICommentsState = {
@@ -30,16 +30,12 @@ const CommentsMobile = () => {
   };
 
   return (
-    <>
-      <Main>
-        <CommentsMobileTop />
-        <section>
-          <CommentsMobileAuthor commentState={commentState} />
-          <CommentsMobileContent commentState={commentState} />
-        </section>
-      </Main>
-      <NavMobile path={commentState.authorProfile} />
-    </>
+    <PageTemplateMobile header={<CommentsMobileTop />}>
+      <Section>
+        <CommentsMobileAuthor commentState={commentState} />
+        <CommentsMobileContent commentState={commentState} />
+      </Section>
+    </PageTemplateMobile>
   );
 };
 

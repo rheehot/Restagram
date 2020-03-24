@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import oc from 'open-color';
-import shared from '@styles/shared';
+import shared from '@/styles/shared';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 const Author = styled.div`
   display: flex;
@@ -17,6 +22,7 @@ const Intro = styled.div`
 
 const Content = styled.div`
   display: flex;
+  margin-bottom: 1rem;
 `;
 
 const Name = styled.strong`
@@ -30,4 +36,22 @@ const Divider = styled.div`
   margin: 1rem 0;
 `;
 
-export { Author, Profile, Intro, Content, Name, Divider };
+const Time = styled.p`
+  color: ${oc.gray[5]};
+`;
+
+const Follow = styled.span`
+  color: black;
+`;
+
+export {
+  Container,
+  Author,
+  Profile,
+  Intro,
+  Content,
+  Name,
+  Divider,
+  Time,
+  Follow,
+};

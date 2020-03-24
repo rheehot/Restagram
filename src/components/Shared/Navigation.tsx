@@ -25,16 +25,18 @@ const Nav = styled.nav`
   border-top: 1px solid #bbbbbb;
 `;
 
-const NavMobile = ({ path }: { path: string }) => {
+const profile = 'https://bit.ly/39WMuWx';
+
+const Navigation = () => {
   return (
     <Nav>
       <IoMdHome />
       <IoIosSearch />
       <IoIosAddCircleOutline />
       <IoIosHeartEmpty />
-      <shared.CircleImage src={path} alt="프로필 사진" />
+      <shared.CircleImage src={profile} alt="프로필 사진" />
     </Nav>
   );
 };
 
-export default NavMobile;
+export default Navigation;

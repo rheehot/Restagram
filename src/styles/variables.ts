@@ -10,14 +10,21 @@ const mobile = {
   navHeight: '52px',
 };
 
+// Laptop
+const laptop = {
+  headerHeight: '64px',
+  bottomHeight: '64px',
+};
+
 // Comments
 const comments = {
   headerHeight: '48px',
-  formHeight: '64px',
+  formHeight: '52px',
 };
 
 export default {
   auth,
   mobile,
+  laptop,
   comments,
 };

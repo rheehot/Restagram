@@ -1,12 +1,11 @@
 import React from 'react';
-import PageTemplate from '@components/Shared/PageTemplate';
-import { ICommentsState } from '@components/CommentsMobile/types';
+import { ICommentsState } from '@/components/CommentsMobile/types';
 import {
   CommentsLaptopContent,
   CommentsLaptopPhoto,
-} from '@components/CommentsLaptop/index';
-import HeaderLaptop from '@components/Shared/HeaderLaptop';
+} from '@/components/CommentsLaptop/index';
 import Container from './CommentsLaptop.style';
+import PageTemplateLaptop from '@/components/Shared/PageTemplateLaptop';
 
 const CommentsLaptop = () => {
   const commentState: ICommentsState = {
@@ -30,12 +29,12 @@ const CommentsLaptop = () => {
   };
 
   return (
-    <PageTemplate top={<HeaderLaptop />} bottom={null}>
+    <PageTemplateLaptop>
       <Container>
         <CommentsLaptopPhoto commentState={commentState} />
         <CommentsLaptopContent commentState={commentState} />
       </Container>
-    </PageTemplate>
+    </PageTemplateLaptop>
   );
 };
 
