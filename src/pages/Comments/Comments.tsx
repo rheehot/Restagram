@@ -1,16 +1,13 @@
 import React from 'react';
-import NavTemplate from '@components/Shared/NavTemplate';
+import { useMediaQuery } from 'beautiful-react-hooks';
+import device from '@styles/device';
 import CommentsMobile from './CommentsMobile';
-import Main from './Comments.style';
+import CommentsLaptop from './CommentsLaptop';
 
 const Comments = () => {
-  return (
-    <NavTemplate>
-      <Main>
-        <CommentsMobile />
-      </Main>
-    </NavTemplate>
-  );
+  const isLaptop = useMediaQuery(device.Laptops);
+
+  return isLaptop ? <CommentsLaptop /> : <CommentsMobile />;
 };
 
 export default Comments;

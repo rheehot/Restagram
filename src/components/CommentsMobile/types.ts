@@ -1,4 +1,4 @@
-interface ICommentState {
+export interface ICommentState {
   id: number;
   authorId: string;
   authorProfile: string;
@@ -14,5 +14,6 @@ export interface ICommentsState {
   authorProfile: string;
   content: string;
   time: number;
+  images: string[];
   comments: ICommentState[];
 }
