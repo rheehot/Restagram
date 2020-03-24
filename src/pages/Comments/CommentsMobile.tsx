@@ -3,9 +3,9 @@ import {
   CommentsMobileTop,
   CommentsMobileAuthor,
   CommentsMobileContent,
-} from '@components/CommentsMobile/index';
-import { ICommentsState } from '@components/CommentsMobile/types';
-import NavMobile from '@components/Shared/NavMobile';
+} from '@/components/CommentsMobile/index';
+import { ICommentsState } from '@/components/CommentsMobile/types';
+import NavMobile from '@/components/Shared/NavMobile';
 import Main from './CommentsMobile.style';
 
 const CommentsMobile = () => {

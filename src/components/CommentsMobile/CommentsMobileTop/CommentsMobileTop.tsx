@@ -1,8 +1,9 @@
 import React from 'react';
-import shared from '@styles/shared';
-import LayoutWrapper from '@styles/layout';
-import profile from '@images/profile.jpg';
+import shared from '@/styles/shared';
+import LayoutWrapper from '@/styles/layout';
 import * as S from './CommentsMobileTop.style';
+
+const profile = 'https://bit.ly/39WMuWx';
 
 const CommentsMobileTop = () => {
   return (

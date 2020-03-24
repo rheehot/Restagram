@@ -1,5 +1,5 @@
 import React from 'react';
-import LayoutWrapper from '@styles/layout';
+import LayoutWrapper from '@/styles/layout';
 import { ICommentsState } from '../types';
 import * as S from './CommentsMobileAuthor.style';
 

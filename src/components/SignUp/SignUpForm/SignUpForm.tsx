@@ -1,6 +1,6 @@
 import React from 'react';
-import LayoutWrapper from '@styles/layout';
-import AuthInput from '@components/Shared/AuthInput';
+import LayoutWrapper from '@/styles/layout';
+import AuthInput from '@/components/Shared/AuthInput';
 import * as S from './SignUpForm.style';
 
 const SignUpForm = () => {

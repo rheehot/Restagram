@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { FaFacebookSquare } from 'react-icons/fa';
 import oc from 'open-color';
-import variables from '@styles/variables';
-import shared from '@styles/shared';
-import device from '@styles/device';
-import palette from '@styles/palette';
+import variables from '@/styles/variables';
+import shared from '@/styles/shared';
+import device from '@/styles/device';
+import palette from '@/styles/palette';
 
 const Divider = styled.hr`
   position: relative;

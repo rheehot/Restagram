@@ -1,6 +1,6 @@
 import React from 'react';
 import { useMediaQuery } from 'beautiful-react-hooks';
-import device from '@styles/device';
+import device from '@/styles/device';
 import CommentsMobile from './CommentsMobile';
 import CommentsLaptop from './CommentsLaptop';
 

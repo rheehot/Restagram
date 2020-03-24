@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import { IoMdHeartEmpty, IoIosSearch } from 'react-icons/io';
 import { FaRegCompass } from 'react-icons/fa';
 import oc from 'open-color';
-import profile from '@images/profile.jpg';
-import shared from '@styles/shared';
-import LayoutWrapper from '@styles/layout';
+import shared from '@/styles/shared';
+import LayoutWrapper from '@/styles/layout';
 import LogoIcon from './LogoIcon';
 import LogoText from './LogoText';
+
+const profile = 'https://bit.ly/39WMuWx';
 
 const Header = styled.header`
   position: fixed;

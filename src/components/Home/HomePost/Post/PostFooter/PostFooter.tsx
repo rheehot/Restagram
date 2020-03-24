@@ -1,5 +1,5 @@
 import React from 'react';
-import { IPostState, IShortComment } from '@components/Home/types';
+import { IPostState, IShortComment } from '@/components/Home/types';
 import * as S from './PostFooter.style';
 
 const PostFooter = ({ post }: { post: IPostState }) => {

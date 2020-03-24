@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent } from '@testing-library/react';
-import renderWithRouter from '@utils/renderWithRouter';
+import renderWithRouter from '@/utils/renderWithRouter';
 import { LoginOther } from '../index';
 
 describe('Login 컴포넌트 테스트', () => {

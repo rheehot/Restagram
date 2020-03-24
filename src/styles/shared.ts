@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
-import device from '@styles/device';
-import variables from '@styles/variables';
+import device from '@/styles/device';
+import variables from '@/styles/variables';
 
 export const authFormStyle = css`
   display: block;

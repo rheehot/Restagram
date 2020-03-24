@@ -6,9 +6,9 @@ import {
   IoIosAddCircleOutline,
   IoIosHeartEmpty,
 } from 'react-icons/io';
-import shared from '@styles/shared';
-import zIndexes from '@styles/zIndexes';
-import variables from '@styles/variables';
+import shared from '@/styles/shared';
+import zIndexes from '@/styles/zIndexes';
+import variables from '@/styles/variables';
 
 const Nav = styled.nav`
   position: fixed;

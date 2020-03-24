@@ -1,6 +1,6 @@
 import React from 'react';
-import LayoutWrapper from '@styles/layout';
-import AuthFacebook from '@components/Shared/AuthFacebook';
+import LayoutWrapper from '@/styles/layout';
+import AuthFacebook from '@/components/Shared/AuthFacebook';
 
 const SignUpOther = () => {
   return (

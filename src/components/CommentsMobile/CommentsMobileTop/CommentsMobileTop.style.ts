@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { IoIosArrowBack } from 'react-icons/io';
-import variables from '@styles/variables';
-import palette from '@styles/palette';
-import zIndexes from '@styles/zIndexes';
+import variables from '@/styles/variables';
+import palette from '@/styles/palette';
+import zIndexes from '@/styles/zIndexes';
 import oc from 'open-color';
 
 const Container = styled.div`

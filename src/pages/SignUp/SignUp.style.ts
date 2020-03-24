@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import shared from '@styles/shared';
+import shared from '@/styles/shared';
 
 const Container = styled.main`
   ${shared.centerStyle};

@@ -1,7 +1,7 @@
 import React from 'react';
-import LogoText from 'components/Shared/LogoText';
-import LogoIcon from 'components/Shared/LogoIcon';
-import LayoutWrapper from 'styles/layout';
+import LogoText from '@/components/Shared/LogoText';
+import LogoIcon from '@/components/Shared/LogoIcon';
+import LayoutWrapper from '@/styles/layout';
 import Container from './LoginIntro.style';
 
 const LoginIntro = () => {

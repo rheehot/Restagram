@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import palette from '@styles/palette';
+import palette from '@/styles/palette';
 
 const NoAccount = styled.p`
   padding: 2rem 0;

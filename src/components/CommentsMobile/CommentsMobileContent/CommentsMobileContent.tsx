@@ -1,6 +1,6 @@
 import React from 'react';
-import LayoutWrapper from '@styles/layout';
-import Comment from '@components/Shared/Comment';
+import LayoutWrapper from '@/styles/layout';
+import Comment from '@/components/Shared/Comment';
 import Wrapper from './CommentsMobileContent.style';
 import { ICommentsState } from '../types';
 

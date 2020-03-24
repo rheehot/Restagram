@@ -1,6 +1,6 @@
 import React from 'react';
-import LayoutWrapper from '@styles/layout';
-import { IPostState } from '@components/Home/types';
+import LayoutWrapper from '@/styles/layout';
+import { IPostState } from '@/components/Home/types';
 import { PostHeader, PostFooter, PostPhoto } from './Post/index';
 import Container from './HomePost.style';
 

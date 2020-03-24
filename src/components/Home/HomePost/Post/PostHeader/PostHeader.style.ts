@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import shared from '@styles/shared';
-import palette from '@styles/palette';
+import shared from '@/styles/shared';
+import palette from '@/styles/palette';
 
 const PostHeader = styled.div`
   display: flex;
