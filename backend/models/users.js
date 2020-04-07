@@ -18,6 +18,10 @@ module.exports = function (sequelize, DataTypes) {
         type: DataTypes.STRING(200),
         allowNull: false,
       },
+      user_salt: {
+        type: DataTypes.STRING(200),
+        allowNull: false,
+      },
       user_nick: {
         type: DataTypes.STRING(45),
         allowNull: false,

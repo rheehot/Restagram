@@ -8,7 +8,7 @@ const router = require('./routes/index');
 
 const app = express();
 
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.use(logger('dev'));
 app.use(express.json());
