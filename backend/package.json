@@ -17,7 +17,12 @@
     "sequelize": "^5.21.6"
   },
   "devDependencies": {
+    "acorn": "^7.1.1",
+    "clean-css": "^4.2.3",
+    "constantinople": "^4.0.1",
     "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-prettier": "^3.1.2"
+    "eslint-plugin-prettier": "^3.1.2",
+    "kind-of": "^6.0.3",
+    "uglify-js": "^3.8.1"
   }
 }
