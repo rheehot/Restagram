@@ -1,39 +1,37 @@
 const models = require('../models');
+const debug = require('debug')('PostsService');
 
-const getFollowingIds = async (user_id) => {
+const getFollowingIds = async (userId) => {
+  debug(`Call getFollowingIds with userId: ${userId}`);
   const followingIds = (
     await models.follows.findAll({
-      where: { follower_user_id: user_id },
+      where: { user_follower_id: userId },
     })
-  ).map((following) => following.dataValues.following_user_id);
+  ).map((following) => following.dataValues.user_following_id);
   return followingIds;
 };
 
-const getInfosFromUserIds = async (userIds) => {
-  const userInfos = [];
-  for (let user_id of userIds) {
-    const info = await models.users.findOne({ where: { user_id } });
-    const { user_name, user_profile } = info.dataValues;
-    userInfos.push({
-      user_id,
-      user_name,
-      user_profile,
-    });
-  }
-  return userInfos;
+const getInfoFromUserId = async (userId) => {
+  debug(`Call getInfoFromUserId with userId: ${userId}`);
+  const db = await models.users.findOne({ where: { user_id: userId } });
+  const { user_name, user_profile } = db.dataValues;
+  debug(user_profile);
+  return { user_id: userId, user_name, user_profile };
 };
 
 const getPhotosFromPostId = async (postId) => {
+  debug(`Call getPhotosFromPostId with postId: ${postId}`);
   const photos = (
     await models.photos.findAll({ where: { photo_post_id: postId } })
-  ).map((photo) => ({
+  ).map((photo) => {
     const { photo_id, photo_path } = photo.dataValues;
-    photo_id,
-    photo_path,
-  }));
+    return { photo_id, photo_path };
+  });
+  return photos;
 };
 
 const getCommentsFromPostId = async (postId) => {
+  debug(`Call getCommentsFromPostId with postId: ${postId}`);
   const dbComments = await models.comments.findAll({
     where: { comment_post_id: postId },
   });
@@ -55,37 +53,66 @@ const getCommentsFromPostId = async (postId) => {
   return comments;
 };
 
+const getPost = async (postId) => {
+  const dbPost = await models.posts.findOne({
+    where: { post_id: postId },
+  });
+  const { post_content, post_date, post_user_id } = dbPost.dataValues;
+  const dbUser = await models.users.findOne({
+    where: { user_id: post_user_id },
+  });
+  const { user_name, user_profile } = dbUser.dataValues;
+  const photos = await getPhotosFromPostId(postId);
+  const comments = await getCommentsFromPostId(postId);
+  return {
+    user_id,
+    user_name,
+    user_profile,
+    post_id,
+    post_content,
+    post_date,
+    post_photos: photos,
+    post_comments: comments,
+  };
+};
+
 const getPostsFromUserId = async (userId) => {
+  debug(`Call getPostsFromUserId with userId: ${userId}`);
+  const userInfo = await getInfoFromUserId(userId);
   const dbPosts = await models.posts.findAll({
     where: { post_user_id: userId },
   });
   const posts = [];
-  for (let post of dbPosts) {
-    const { post_id, post_content, post_date } = post.dataValues;
-    const photos = await getPhotosFromPostId(post_id);
-    const comments = await getCommentsFromPostId(post_id);
-    posts.push({
-      user_id: userId,
-      post_id,
-      post_content,
-      post_date,
-      post_photos: photos,
-      post_comments: comments,
-    });
+  for (let dbPost of dbPosts) {
+    const { user_id, user_name, user_profile } = userInfo;
+    const { post_id } = dbPost.dataValues;
+    const post = await getPost(post_id);
+    posts.push(post);
   }
   return posts;
 };
 
 class PostsService {
   async loadFeed(body) {
+    debug(`피드 로드하기: ${JSON.stringify(body)}`);
     const { user_id } = body;
     const followingIds = await getFollowingIds(user_id);
-    const feed = [];
+    let feed = [];
     for (let id of followingIds) {
       const posts = await getPostsFromUserId(id);
-      feed.concat(posts);
+      feed = feed.concat(posts);
     }
     feed.sort((post1, post2) => post1.post_date - post2.post_date);
+    debug(feed);
     return feed;
   }
+
+  async loadPost(body) {
+    debug(`포스트 로드하기: ${JSON.stringify(body)}`);
+    const { post_id } = body;
+    const post = await getPost(post_id);
+    return post;
+  }
 }
+
+module.exports = PostsService;
